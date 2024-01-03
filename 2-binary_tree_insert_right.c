@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 /**
- * binary_tree_insert_right -  inserts a node as the right-child of another node
+ * binary_tree_insert_right - inserts a node as
+ *                            the right-child of another node
  * @parent: Pointer to the parent node of the node to create
  * @value: Value to put in the new node
  *
