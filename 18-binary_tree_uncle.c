@@ -8,7 +8,7 @@
  *
  * @node: A pointer to the node to find uncle.
  *
- * Return: Pointer to sibling.
+ * Return: Pointer to uncle.
  */
 
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)

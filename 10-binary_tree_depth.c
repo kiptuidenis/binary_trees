@@ -11,30 +11,17 @@
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-    if (tree == NULL)
-    {
-        return 0;
+    size_t depth = 0;
+
+    if (tree == NULL) {
+        return 0; /* If the node is NULL, its depth is 0 */
     }
-    else
-    {
-        size_t left_height = 0, right_height = 0;
 
-        if (tree->left != NULL)
-        {
-            left_height = 1 + binary_tree_depth(tree->left);
-        }
-
-        if (tree->right != NULL)
-        {
-            right_height = 1 + binary_tree_depth(tree->right);
-        }
-
-        if (left_height > right_height)
-        {
-            return left_height;
-        } else 
-        {
-            return right_height;
-        }
+    /* Traverse upward to the root, incrementing depth for each level */
+    while (tree->parent != NULL) {
+        depth++;
+        tree = tree->parent;
     }
+
+    return depth;
 }
